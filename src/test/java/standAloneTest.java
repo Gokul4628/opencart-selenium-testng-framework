@@ -10,6 +10,8 @@ public class standAloneTest {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://naveenautomationlabs.com/opencart/");
+
+        //account creation -------------
         driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/a/span[1]")).click();
         driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[1]/a")).click();
         driver.findElement(By.xpath("//*[@id=\"input-firstname\"]")).sendKeys("Arnold");
@@ -21,5 +23,13 @@ public class standAloneTest {
         driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div/input[1]")).click();
         driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div/input[2]")).click();
         driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/a")).click();
+
+        //login---------
+
+        driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[2]/a")).click();
+        driver.findElement(By.id("input-email")).sendKeys("testtst");
+        driver.findElement(By.id("input-password")).sendKeys("hsdhashd");
+        driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/form/input")).click();
     }
 }

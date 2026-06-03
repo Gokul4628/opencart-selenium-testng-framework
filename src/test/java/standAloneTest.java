@@ -16,8 +16,10 @@ public class standAloneTest {
         driver.findElement(By.xpath("//*[@id=\"input-lastname\"]")).sendKeys("termin");
         driver.findElement(By.xpath("//*[@id=\"input-email\"]")).sendKeys("arnold7@gmail.com");
         driver.findElement(By.id("input-telephone")).sendKeys("1234567890");
-        driver.findElement(By.xpath("//*[@id=\"input-password\"]")).sendKeys("arnold7");
-        driver.findElement(By.xpath("//*[@id=\"form-register\"]/div/div/input")).click();
-        driver.findElement(By.xpath("//*[@id=\"form-register\"]/div/button")).click();
+        driver.findElement(By.id("input-telephone")).sendKeys("arnold7");
+        driver.findElement(By.id("input-confirm")).sendKeys("arnold7");
+        driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div/input[1]")).click();
+        driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div/input[2]")).click();
+        driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/a")).click();
     }
 }

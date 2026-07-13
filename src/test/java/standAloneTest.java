@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import javax.naming.ldap.LdapReferralException;
+import java.time.Duration;
 import java.util.List;
 
 public class standAloneTest {
@@ -13,6 +14,8 @@ public class standAloneTest {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
         driver.get("https://naveenautomationlabs.com/opencart/");
 
         //account creation -------------
@@ -22,8 +25,8 @@ public class standAloneTest {
         driver.findElement(By.xpath("//*[@id=\"input-lastname\"]")).sendKeys("termin");
         driver.findElement(By.xpath("//*[@id=\"input-email\"]")).sendKeys("arnold7@gmail.com");
         driver.findElement(By.id("input-telephone")).sendKeys("1234567890");
-        driver.findElement(By.id("input-telephone")).sendKeys("arnold7");
-        driver.findElement(By.id("input-confirm")).sendKeys("arnold7");
+        driver.findElement(By.id("input-password")).sendKeys("arnold7333");
+        driver.findElement(By.id("input-confirm")).sendKeys("arnold7333");
         driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div/input[1]")).click();
         driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div/input[2]")).click();
         driver.findElement(By.xpath("//*[@id=\"content\"]/div/div/a")).click();
@@ -82,6 +85,7 @@ public class standAloneTest {
 
 
 
+    //Item addition to cart
 
 
     }
